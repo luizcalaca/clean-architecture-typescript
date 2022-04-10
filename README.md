@@ -10,4 +10,5 @@ Steps to run this project:
 npm i -g @tsclean/scaffold
 scaffold create:project --name=app
 scaffold create:entity --name=person
+scaffold create:interface --name=add-person --path=models
 ```
