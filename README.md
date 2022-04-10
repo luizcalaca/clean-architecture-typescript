@@ -13,4 +13,5 @@ scaffold create:entity --name=person
 scaffold create:interface --name=add-person --path=models
 scaffold create:service --name=add-person
 scaffold create:adapter-orm --name=person --orm=mongoose
+scaffold create:controller --name=add-person
 ```
