@@ -3,15 +3,15 @@ import {PersonModel, AddPersonParams} from "@/domain/models/person";
 import {ADD_PERSON_SERVICE, IAddPersonService} from "@/domain/use-cases/add-person-service";
 
 @Mapping('api/v1/add-person')
-export class AddUserController {
+export class AddPersonController {
 
     constructor(
-         @Adapter(ADD_PERSON_SERVICE) private readonly addUserService: IAddPersonService
+         @Adapter(ADD_PERSON_SERVICE) private readonly addPersonService: IAddPersonService
     ) {
     }
 
     @Post()
     async addUserController(@Body() data: AddPersonParams): Promise<PersonModel> {
-        return await this.addUserService.addUserService(data);
+        return await this.addPersonService.addPersonService(data);
     }
 }

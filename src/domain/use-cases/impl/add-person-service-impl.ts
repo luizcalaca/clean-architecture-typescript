@@ -10,7 +10,6 @@ export class AddPersonServiceImpl implements IAddPersonService {
         @Adapter(ADD_PERSON_REPOSITORY) private readonly addPersonRepository: IAddPersonRepository
     ) {
     }
-    addUserService: (data: AddPersonParams) => Promise<PersonModel>;
 
     async addPersonService(data: AddPersonParams): Promise<PersonModel> {
         return await this.addPersonRepository.addUserRepository(data);
